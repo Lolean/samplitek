@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SamplitekApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(SamplitekApplication.class, args);
+    public static void main(){
     }
 
 }
