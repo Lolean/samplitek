@@ -1,4 +1,4 @@
-package tek.rscrew.samplitek;
+package tek.rscrew.samplitek.adapter.in;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,4 +12,9 @@ public class SamplitekController {
         modelAndView.setViewName("index.html");
         return modelAndView;
     }
+
+    
+
+
+
 }
