@@ -43,4 +43,6 @@ public class ControllerTest {
         mockMvc.perform(get("/samples")).andExpect(status().isOk()).andExpect(jsonPath("$[0].name",is("amen break")));
 
     }
+
+    
 }
