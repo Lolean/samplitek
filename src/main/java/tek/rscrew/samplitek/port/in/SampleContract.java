@@ -9,9 +9,11 @@ public interface SampleContract {
 
     List<Sample> getSamples();
 
-    Sample singleSample();
+    Sample singleSample(final long id);
 
-    void addSample();
+    Sample createSample(Sample sa);
+
+    void deleteSample(final long id);
 
     void updateSample();
 }

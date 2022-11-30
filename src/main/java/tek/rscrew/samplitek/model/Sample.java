@@ -1,17 +1,23 @@
 package tek.rscrew.samplitek.model;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Data
+@RequiredArgsConstructor
 public class Sample {
 
-    private String name;
 
-    private String genre;
+    private final Long id;
 
-    private String instrument;
+    private final String name;
 
-    private String creator;
+    private final String genre;
 
-    private int bpm;
+    private final String instrument;
+
+    private final String creator;
+
+    private final int bpm;
 }
