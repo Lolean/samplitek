@@ -18,7 +18,7 @@ public class Configuration {
     private SampleMapper sampleMapper = new SampleMapper();
 
     @Bean
-    SampleAccess getSampleContract(){
+    SampleAccess getSampleAccess(){
         return new SamplePersistenceAdapter(sampleRepository,sampleMapper);
     }
 
