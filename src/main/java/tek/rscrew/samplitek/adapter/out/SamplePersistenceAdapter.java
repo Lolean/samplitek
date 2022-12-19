@@ -23,20 +23,24 @@ public class SamplePersistenceAdapter implements SampleAccess {
 
     @Override
     public Sample singleSample(Long id) {
-
+        //to DO
+        return null;
     }
     @Override
     public Sample createSample(Sample sa){
+        //TO DO
         return null;
     }
 
     @Override
     public void deleteSample(){
-
+        //TO DO
     }
 
     @Override
     public Sample updateSample(Sample sa){
+
+        //TO DO
         return null;
     }
 

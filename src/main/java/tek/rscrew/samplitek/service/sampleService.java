@@ -28,11 +28,13 @@ public class sampleService implements SampleContract {
 
     @Override
     public Sample updateSample(Sample sa) {
+        //TO DO
         return null;
     }
 
     @Override
     public void deleteSample(long id) {
+        //TO DO
 
     }
 }
