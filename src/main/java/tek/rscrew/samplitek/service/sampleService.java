@@ -1,5 +1,7 @@
 package tek.rscrew.samplitek.service;
 
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 import tek.rscrew.samplitek.model.Sample;
 import tek.rscrew.samplitek.port.in.SampleContract;
 import tek.rscrew.samplitek.port.out.SampleAccess;
