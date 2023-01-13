@@ -36,12 +36,10 @@ public class SamplitekController {
     public Sample createSample(@RequestBody Sample sa){
         return sampleContract.createSample(sa);
 
-
     }
     @DeleteMapping("/sample/{id}")
     public void deleteSample(@PathVariable("id") final long id){
         sampleContract.deleteSample(id);
-
 
     }
 
