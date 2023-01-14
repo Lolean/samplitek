@@ -7,10 +7,10 @@ import tek.rscrew.samplitek.port.in.SampleContract;
 import tek.rscrew.samplitek.port.out.SampleAccess;
 
 import java.util.List;
-
+@RequiredArgsConstructor
 public class sampleService implements SampleContract {
 
-    private SampleAccess sampleAccess;
+    private final SampleAccess sampleAccess;
 
     @Override
     public List<Sample> getSamples() {

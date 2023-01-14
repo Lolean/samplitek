@@ -10,7 +10,7 @@ public class SampleMapper {
 
     List<Sample> mapToSample(List<SampleJPA> dbSamples){
 
-        List<Sample> samples = new ArrayList<>();
+        List<Sample> samples = new ArrayList<Sample>();
 
         for(SampleJPA sJPA: dbSamples){
 

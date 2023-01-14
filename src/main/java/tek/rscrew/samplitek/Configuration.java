@@ -21,6 +21,8 @@ public class Configuration {
 
 
 
+
+
     @Bean
     SampleAccess getSampleAccess(){
         return new SamplePersistenceAdapter(sampleRepository,sampleMapper);
@@ -28,7 +30,7 @@ public class Configuration {
 
     @Bean
     SampleContract getSampleContract(){
-        return new sampleService();
+        return new sampleService(new SamplePersistenceAdapter(sampleRepository,sampleMapper));
     }
 
 
