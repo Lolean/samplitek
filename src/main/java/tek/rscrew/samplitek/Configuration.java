@@ -20,9 +20,6 @@ public class Configuration {
     private SampleMapper sampleMapper = new SampleMapper();
 
 
-
-
-
     @Bean
     SampleAccess getSampleAccess(){
         return new SamplePersistenceAdapter(sampleRepository,sampleMapper);

@@ -28,8 +28,9 @@ public class SamplePersistenceAdapter implements SampleAccess {
     }
     @Override
     public Sample createSample(Sample sa){
-        //TO DO
-        return null;
+        SampleJPA sampletocreate = sampleMapper.mapToJPA(sa);
+        sampleRepository.save(sampletocreate);
+        sampleRepository.find
     }
 
     @Override

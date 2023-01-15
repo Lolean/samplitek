@@ -21,6 +21,7 @@ public class SamplitekController {
         return modelAndView;
     }
 
+
     @GetMapping("/samples")
     public Iterable<Sample> getSamples(){
         return sampleContract.getSamples();
