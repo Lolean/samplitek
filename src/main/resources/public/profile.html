@@ -5,8 +5,6 @@
     <title>Samplitek</title>
     <link rel="icon" type="image/x-icon" href="Custom/Images/favicon.png">
     <link rel="stylesheet" href="Custom/css/styles.css">
-    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
-    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header>
@@ -20,16 +18,21 @@
       </div>
     </header>
     <div class="container">
-      <div class="jumbotron">
-        <h1 class="display-4">Accueil</h1>
-        <p class="lead">Bienvenue sur Samplitek</p>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Les news :</h2>
-          <p>Smaplitouk est en ligne ! \( ﾟヮﾟ)/</p>
+        <h1>Mon compte</h1>
+        <div class="row">
+          <div class="col-md-3">
+            <div class="card">
+              <img src="user.jpg" class="card-img-top" alt="Profil utilisateur">
+              <div class="card-body">
+                <h5 class="card-title">Nom d'utilisateur : JohnDoe</h5>
+                <p class="card-text">Adresse e-mail : johndoe@example.com</p>
+                <form action="/update" method="post">
+                  <input type="submit" class="btn btn-primary" value="Modifier le profil">
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
   </body>
 </html>

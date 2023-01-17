@@ -1,17 +1,4 @@
-@font-face {
-    font-family: 'BatmanForeverAlternate';
-    src: local('/Custom/Fonts/BatmanForeverAlternate.eot');
-    src: local('/Custom/Fonts/BatmanForeverAlternate.eot?#iefix') format('embedded-opentype'),
-        local('/Custom/Fonts/BatmanForeverAlternate.woff2') format('woff2'),
-        local('/Custom/Fonts/BatmanForeverAlternate.woff') format('woff'),
-        local('/Custom/Fonts/BatmanForeverAlternate.ttf') format('truetype'),
-        local('/Custom/Fonts/BatmanForeverAlternate.svg#BatmanForeverAlternate') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-/*******************************************************/
+/****Header****/
 
 header{
   display: flex;
@@ -44,4 +31,11 @@ header a{
   border-bottom: 2px black solid;
 }
 
-/********************************************************/
+/****Body****/
+
+h1{
+  margin-left: 2%;
+}
+h2{
+  margin-left: 2%;
+}
