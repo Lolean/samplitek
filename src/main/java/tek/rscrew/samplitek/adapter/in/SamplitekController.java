@@ -6,6 +6,7 @@ import org.springframework.web.servlet.ModelAndView;
 import tek.rscrew.samplitek.model.Sample;
 import tek.rscrew.samplitek.port.in.SampleContract;
 
+import javax.persistence.PostUpdate;
 import java.util.List;
 
 @RestController
@@ -38,9 +39,17 @@ public class SamplitekController {
         return sampleContract.createSample(sa);
 
     }
-    @DeleteMapping("/sample/{id}")
-    public void deleteSample(@PathVariable("id") final long id){
-        sampleContract.deleteSample(id);
+
+    @PostMapping("/updateSample")
+    public Sample updateSample(@RequestBody Sample sa){
+        return sampleContract.updateSample(sa);
+
+    }
+
+
+    @PostMapping("/deleteSample")
+    public void deleteSample(@RequestBody Sample sa){
+        sampleContract.deleteSample(sa);
 
     }
 

@@ -24,7 +24,7 @@ dependencies {
     implementation 'org.springframework.integration:spring-integration-http'
     implementation 'org.testcontainers:testcontainers:1.17.6'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-    implementation group: 'org.flywaydb', name: 'flyway-core', version: '9.4.0'
+    implementation 'org.flywaydb:flyway-core:9.11.0'
     testImplementation 'org.testcontainers:junit-jupiter:1.16.0'
     testImplementation 'org.testcontainers:postgresql:1.16.0'
     testImplementation 'junit:junit:4.13.1'

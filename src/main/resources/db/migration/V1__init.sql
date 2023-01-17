@@ -4,9 +4,6 @@ CREATE TABLE IF NOT EXISTS samples (
     genre VARCHAR(20),
     instrument VARCHAR(50) NOT NULL,
     creator VARCHAR(20) NOT NULL,
-    bpm INT
+    bpm INT,
+    Hidden BOOLEAN  NOT NULL DEFAULT false
     );
-
-
-
-

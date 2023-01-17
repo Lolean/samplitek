@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class SampleJPA {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
@@ -29,6 +29,8 @@ public class SampleJPA {
 
     private int bpm;
 
+    private boolean Hidden;
+
     public SampleJPA() {
 
     }
@@ -38,7 +40,20 @@ public class SampleJPA {
         this.name = name;
         this.genre = genre;
         this.instrument = inst;
+        this.creator = creator;
         this.bpm = bpm;
+        this.Hidden = false;
+
+    }
+
+    public SampleJPA(Long id,String name, String genre, String inst, String creator, int bpm,Boolean hidden){
+        this.id = id;
+        this.name = name;
+        this.genre = genre;
+        this.instrument = inst;
+        this.creator = creator;
+        this.bpm = bpm;
+        this.Hidden = hidden;
     }
 
 

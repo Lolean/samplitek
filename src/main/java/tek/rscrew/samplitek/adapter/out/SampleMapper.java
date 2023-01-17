@@ -15,7 +15,7 @@ public class SampleMapper {
         for(SampleJPA sJPA: dbSamples){
 
             samples.add(new Sample(sJPA.getId(), sJPA.getName(),
-                    sJPA.getGenre(), sJPA.getInstrument(), sJPA.getCreator(), sJPA.getBpm()));
+                    sJPA.getGenre(), sJPA.getInstrument(), sJPA.getCreator(), sJPA.getBpm(),sJPA.isHidden()));
 
         }
         return samples;
@@ -25,7 +25,7 @@ public class SampleMapper {
     Sample mapToSample(SampleJPA sampleJPA) {
 
         Sample sample = new Sample(sampleJPA.getId(), sampleJPA.getName(), sampleJPA.getGenre(), sampleJPA.getInstrument(),
-                sampleJPA.getCreator(), sampleJPA.getBpm());
+                sampleJPA.getCreator(), sampleJPA.getBpm(),sampleJPA.isHidden());
 
         return sample;
     }
@@ -33,6 +33,14 @@ public class SampleMapper {
     SampleJPA mapToJPA(Sample sample){
         SampleJPA sampleJPA = new SampleJPA(sample.getName(),sample.getGenre(),
                 sample.getInstrument(),sample.getCreator(),sample.getBpm());
+
+        return sampleJPA;
+
+    }
+
+    SampleJPA maptoJPAid(Sample sample,Long sampleid){
+        SampleJPA sampleJPA = new SampleJPA(sampleid,sample.getName(),sample.getGenre(),
+                sample.getInstrument(),sample.getCreator(),sample.getBpm(),sample.getHidden());
 
         return sampleJPA;
 

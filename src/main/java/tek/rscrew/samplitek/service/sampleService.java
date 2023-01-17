@@ -30,13 +30,12 @@ public class sampleService implements SampleContract {
 
     @Override
     public Sample updateSample(Sample sa) {
-        //TO DO
-        return null;
+        return sampleAccess.updateSample(sa);
     }
 
     @Override
-    public void deleteSample(long id) {
-        //TO DO
+    public void deleteSample(Sample sa) {
+        sampleAccess.deleteSample(sa);
 
     }
 }

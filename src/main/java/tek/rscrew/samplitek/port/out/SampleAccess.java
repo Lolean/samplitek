@@ -12,7 +12,7 @@ public interface SampleAccess {
 
     Sample createSample(Sample sa);
 
-    void deleteSample();
+    void deleteSample(Sample sa);
 
     Sample updateSample(Sample sa);
 

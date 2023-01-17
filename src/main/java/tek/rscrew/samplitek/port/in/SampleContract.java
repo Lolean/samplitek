@@ -13,7 +13,7 @@ public interface SampleContract {
 
     Sample createSample(Sample sa);
 
-    void deleteSample(final long id);
+    void deleteSample(Sample sa);
 
     Sample updateSample(Sample sa);
 }

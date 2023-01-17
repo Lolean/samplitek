@@ -20,4 +20,6 @@ public class Sample {
     private final String creator;
 
     private final int bpm;
+
+    private final Boolean hidden;
 }
