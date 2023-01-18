@@ -5,6 +5,8 @@
     <title>Samplitek</title>
     <link rel="icon" type="image/x-icon" href="Custom/Images/favicon.png">
     <link rel="stylesheet" href="Custom/css/styles.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header>
@@ -18,6 +20,25 @@
       </div>
     </header>
     <h1>SAMPLES</h1>
+    <form action="/addSample" method="post">
+      <div class="form-group">
+        <label for="samplename">Nom du sample :</label>
+        <input type="text" class="form-control" id="samplename" name="samplename">
+      </div>
+      <div class="form-group">
+        <label for="genre">Genre :</label>
+        <input type="text" class="form-control" id="genre" name="genre">
+      </div>
+      <div class="form-group">
+        <label for="instrument">Instrument :</label>
+        <input type="text" class="form-control" id="instrument" name="instrument">
+      </div>
+      <div class="form-group">
+        <label for="bpm">BPM :</label>
+        <input type="text" class="form-control" id="bpm" name="bpm">
+      </div>
+      <input type="submit" class="btn btn-primary" value="Ajouter un sample !">
+    </form>
     <table class="table">
         <thead>
           <tr>
@@ -38,5 +59,6 @@
           </tr>
         </tbody>
     </table>
+  
   </body>
 </html>
