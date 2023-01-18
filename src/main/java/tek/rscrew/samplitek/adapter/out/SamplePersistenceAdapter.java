@@ -42,13 +42,12 @@ public class SamplePersistenceAdapter implements SampleAccess {
     }
 
     @Override
-    public void deleteSample(Sample sa){
-        Optional<SampleJPA> sampleTodelete = sampleRepository.findById(sa.getId());
-        if(sampleMapper.mapToSample(sampleTodelete.get()) == sa){
-            SampleJPA sampleToHide = sampleTodelete.get();
-            sampleToHide.setHidden(true);
-            sampleRepository.save(sampleToHide);
-        }
+    public void deleteSample(Long id){
+        Optional<SampleJPA> sampleTodelete = sampleRepository.findById(id);
+        SampleJPA sampleToHide = sampleTodelete.get();
+        sampleToHide.setHidden(true);
+        sampleRepository.save(sampleToHide);
+
 
     }
 

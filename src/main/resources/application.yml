@@ -1,0 +1,17 @@
+# src/main/resources/application.yml
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          auth0:
+            client-id: 2FbGWoS50VRn9spM57Rh47XGuvn5CeRp
+            client-secret: gxOZyEP6GVs8NeLx9GYSXvX8YIiKfx3VsCS6aFWFcGvrrmpGWGeztFdC_ONnob56
+            scope:
+              - openid
+              - profile
+              - email
+        provider:
+          auth0:
+            # trailing slash is important!
+            issuer-uri: https://lolean-dev.eu.auth0.com/

@@ -34,9 +34,14 @@ public class sampleService implements SampleContract {
     }
 
     @Override
-    public void deleteSample(Sample sa) {
-        sampleAccess.deleteSample(sa);
+    public void deleteSample(Long id) {
+        sampleAccess.deleteSample(id);
 
+    }
+
+    @Override
+    public boolean isAllowed(String email){
+        List<String> allowed = List.of();
     }
 }
 

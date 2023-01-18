@@ -7,16 +7,8 @@
     <link rel="stylesheet" href="Custom/css/styles.css">
   </head>
   <body>
-    <header>
-      <img src="Custom/Images/Samplitek.png" alt="c le logo">
-      <div class="Links">
-        <a href="index.html">Home</a>
-        <a href="samples.html">Samples</a>
-        <a href="shop.html">Shop</a>
-        <a href="profile.html">Profile</a>
-        <a href="login.html">Login</a>
-      </div>
-    </header>
+  <header th:insert="snippets/header.html">
+  </header>
     <div class="container">
         <h1>S'inscrire</h1>
         <form action="/register" method="post">

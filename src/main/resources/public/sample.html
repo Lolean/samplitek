@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:sec="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Samplitek</title>
+    <link rel="icon" type="image/x-icon" href="Custom/Images/favicon.png">
+    <link rel="stylesheet" href="Custom/css/styles.css">
+    <link rel="stylesheet" href="bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form id="form-tab" th:action="@{/updateSample}"   name="samplecreate" method="post">
+    <input type="hidden" name="id" th:value="${sample.id}">
+    <div class="form-group">
+        <label for="name">Sample name :</label>
+        <input type="text" class="form-control" id="name" name="name" th:value="${sample.name}" required>
+    </div>
+    <div class="form-group">
+        <label for="genre">Genre :</label>
+        <input type="text" class="form-control" id="genre" name="genre" th:value="${sample.genre}"  required>
+    </div>
+    <div class="form-group">
+        <label for="instrument">Instrument :</label>
+        <input type="text" class="form-control" id="instrument" name="instrument" th:value="${sample.instrument}" required>
+    </div>
+    <div class="form-group">
+        <label for="creator">Creator :</label>
+        <input type="text" class="form-control" id="creator" name="creator" th:value="${sample.creator}" required>
+    </div>
+    <div class="form-group">
+        <label for="bpm">BPM :</label>
+        <input type="number" class="form-control" id="bpm" name="bpm" th:value="${sample.bpm}" required>
+    </div>
+    <div class="form-group">
+        <p>Delete sample ?</p>
+        <label for="yes">Yes</label>
+        <input type="radio" name="delete" id="yes" value="yes" >
+        <label for="no">No</label>
+        <input type="radio" name="delete" id="no" value="no" checked>
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Submit">
+</form>
+</body>
+</html>

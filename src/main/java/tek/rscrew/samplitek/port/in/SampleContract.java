@@ -13,7 +13,9 @@ public interface SampleContract {
 
     Sample createSample(Sample sa);
 
-    void deleteSample(Sample sa);
+    void deleteSample(Long id);
 
     Sample updateSample(Sample sa);
+
+    boolean isAllowed(String email);
 }

@@ -7,20 +7,14 @@
     <link rel="stylesheet" href="Custom/css/styles.css">
   </head>
   <body>
-    <header>
-      <img src="Custom/Images/Samplitek.png" alt="c le logo">
-      <div class="Links">
-        <a href="index.html">Home</a>
-        <a href="samples.html">Samples</a>
-        <a href="shop.html">Shop</a>
-        <a href="profile.html">Profile</a>
-        <a href="login.html">Login</a>
-      </div>
-    </header>
+  <header th:insert="snippets/header.html">
+  </header>
     <h1>SAMPLES</h1>
+    <a th:href="@{/createSample}">Create sample</a>
     <table class="table">
         <thead>
           <tr>
+            <th>ID</th>
             <th>Nom</th>
             <th>Genre</th>
             <th>Instrument</th>
@@ -30,13 +24,27 @@
         </thead>
         <tbody>
           <tr  th:each="sample : ${samplelist}" th:if="${sample.hidden==false}">
+            <td th:text="${sample.id}"></td>
             <td th:text="${#strings.abbreviate(sample.name,25)}"></td>
             <td th:text="${#strings.abbreviate(sample.genre,25)}"></td>
             <td th:text="${#strings.abbreviate(sample.instrument,25)}"></td>
             <td th:text="${#strings.abbreviate(sample.creator,25)}"></td>
             <td th:text="${#strings.abbreviate(sample.bpm,25)}"></td>
+            <td><a onClick="onModifyClick(event)">Modify </a></td>
           </tr>
         </tbody>
     </table>
   </body>
 </html>
+
+<script>
+
+  function onModifyClick(event) {
+
+    var row = event.target.parentNode.parentNode;
+    var id = row.cells[0].textContent;
+    window.location.href = 'http://localhost:9001/sample/'+id.toString();
+
+  }
+
+</script>
