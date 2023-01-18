@@ -1,6 +1,5 @@
 package tek.rscrew.samplitek.service;
 
-import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import tek.rscrew.samplitek.model.Sample;
 import tek.rscrew.samplitek.port.in.SampleContract;
@@ -41,7 +40,11 @@ public class sampleService implements SampleContract {
 
     @Override
     public boolean isAllowed(String email){
-        List<String> allowed = List.of();
+        List<String> allowed = List.of("loris.quilodran@gmail.com","booya1912@gmail.com");
+        if (allowed.contains(email)){
+            return true;
+        }
+        else return false;
     }
 }
 

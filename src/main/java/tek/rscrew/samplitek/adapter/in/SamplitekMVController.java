@@ -29,8 +29,10 @@ public class SamplitekMVController  {
     @GetMapping("/samples")
     public String samples(Model model, @AuthenticationPrincipal OidcUser principal){
         if(principal != null) {
+            boolean admin = sampleContract.isAllowed(principal.getEmail());
             List<Sample> samples = sampleContract.getSamples();
             model.addAttribute("samplelist", samples);
+            model.addAttribute("allowed",admin);
             return "samples";
         }
         else return "index";
@@ -38,7 +40,7 @@ public class SamplitekMVController  {
 
     @GetMapping("/sample/{id}")
     public String singleSample(@PathVariable("id") Long id,@AuthenticationPrincipal OidcUser principal,Model model){
-        if(principal != null) {
+        if(sampleContract.isAllowed(principal.getEmail())) {
             Sample sample = sampleContract.singleSample(id);
             model.addAttribute(sample);
             return "sample";
@@ -83,7 +85,7 @@ public class SamplitekMVController  {
 
     @PostMapping("/updateSample")
     public RedirectView modify(@RequestParam("delete") String delete,@ModelAttribute Sample sample,Model model,@AuthenticationPrincipal OidcUser principal){
-        if(principal != null){
+        if(sampleContract.isAllowed(principal.getEmail())){
             System.out.println("Delete = "+delete);
             if(delete.equals("no")) {
                 Sample modified = new Sample(sample.getId(), sample.getName(), sample.getGenre(),

@@ -30,10 +30,35 @@
             <td th:text="${#strings.abbreviate(sample.instrument,25)}"></td>
             <td th:text="${#strings.abbreviate(sample.creator,25)}"></td>
             <td th:text="${#strings.abbreviate(sample.bpm,25)}"></td>
-            <td><a onClick="onModifyClick(event)">Modify </a></td>
+            <td th:if="${allowed}"><a onClick="onModifyClick(event)">Modify </a></td>
           </tr>
         </tbody>
     </table>
+
+  <h1 th:if="${allowed}">DELETED SAMPLES</h1>
+  <table class="adminTable" th:if="${allowed}">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Genre</th>
+      <th>Instrument</th>
+      <th>Createur</th>
+      <th>BPM</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr  th:each="sample : ${samplelist}" th:if="${sample.hidden==true}">
+      <td th:text="${sample.id}"></td>
+      <td th:text="${#strings.abbreviate(sample.name,25)}"></td>
+      <td th:text="${#strings.abbreviate(sample.genre,25)}"></td>
+      <td th:text="${#strings.abbreviate(sample.instrument,25)}"></td>
+      <td th:text="${#strings.abbreviate(sample.creator,25)}"></td>
+      <td th:text="${#strings.abbreviate(sample.bpm,25)}"></td>
+      <td th:if="${allowed}"><a onClick="onModifyClick(event)">Modify </a></td>
+    </tr>
+    </tbody>
+  </table>
   </body>
 </html>
 
