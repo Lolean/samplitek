@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Samplitek</title>
+    <link rel="icon" type="image/x-icon" href="Custom/Images/favicon.png">
+    <link rel="stylesheet" href="Custom/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <img src="Custom/Images/Samplitek.png" alt="c le logo">
+      <div class="Links">
+        <a href="index.html">Home</a>
+        <a href="samples.html">Samples</a>
+        <a href="shop.html">Shop</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+      </div>
+    </header>
+    <div class="container">
+      <h1>Acheter des musiques</h1>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card">
+            <img src="album1.jpg" class="card-img-top" alt="Album 1">
+            <div class="card-body">
+              <h5 class="card-title">Album 1</h5>
+              <p class="card-text">Prix : $9.99</p>
+              <form action="/buy" method="post">
+                <input type="hidden" name="album" value="Album 1">
+                <input type="submit" class="btn btn-primary" value="Acheter">
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="album2.jpg" class="card-img-top" alt="Album 2">
+            <div class="card-body">
+              <h5 class="card-title">Album 2</h5>
+              <p class="card-text">Prix : $11.99</p>
+              <form action="/buy" method="post">
+                <input type="hidden" name="album" value="Album 2">
+                <input type="submit" class="btn btn-primary" value="Acheter">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+</html>

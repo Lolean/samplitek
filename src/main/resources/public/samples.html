@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Samplitek</title>
+    <link rel="icon" type="image/x-icon" href="Custom/Images/favicon.png">
+    <link rel="stylesheet" href="Custom/css/styles.css">
+  </head>
+  <body>
+    <header>
+      <img src="Custom/Images/Samplitek.png" alt="c le logo">
+      <div class="Links">
+        <a href="index.html">Home</a>
+        <a href="samples.html">Samples</a>
+        <a href="shop.html">Shop</a>
+        <a href="profile.html">Profile</a>
+        <a href="login.html">Login</a>
+      </div>
+    </header>
+    <h1>SAMPLES</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Genre</th>
+            <th>Instrument</th>
+            <th>Createur</th>
+            <th>BPM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  th:each="sample : ${samplelist}" th:if="${sample.hidden==false}">
+            <td th:text="${#strings.abbreviate(sample.name,25)}"></td>
+            <td th:text="${#strings.abbreviate(sample.genre,25)}"></td>
+            <td th:text="${#strings.abbreviate(sample.instrument,25)}"></td>
+            <td th:text="${#strings.abbreviate(sample.creator,25)}"></td>
+            <td th:text="${#strings.abbreviate(sample.bpm,25)}"></td>
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>

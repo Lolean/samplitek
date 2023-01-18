@@ -1,0 +1,41 @@
+/****Header****/
+
+header{
+  display: flex;
+  flex-flow: row;
+  border-bottom: 2px black solid;
+  overflow: hidden;
+}
+.Links{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: BatmanForeverAlternate;
+}
+header img{
+  width: 50vw;
+  height: 85px;
+  transform: scale(0.5);
+}
+header a{
+  display: flex;
+  justify-content: flex-end;
+  font-family: ROG;
+  font-size: 2rem;
+  text-decoration: none;
+  color: black;
+  width: 10vw;
+  transform: rotate(330deg);
+  border-bottom: 2px black solid;
+}
+
+/****Body****/
+
+h1{
+  margin-left: 2%;
+}
+h2{
+  margin-left: 2%;
+}
