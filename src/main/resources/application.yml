@@ -5,8 +5,8 @@ spring:
       client:
         registration:
           auth0:
-            client-id: 2FbGWoS50VRn9spM57Rh47XGuvn5CeRp
-            client-secret: gxOZyEP6GVs8NeLx9GYSXvX8YIiKfx3VsCS6aFWFcGvrrmpGWGeztFdC_ONnob56
+            client-id: Fob7nKeol2FQydkOlnce01nzOPw1eKzG
+            client-secret: pBeD88P3Eti_yzTMdgnd0bcJHGmYp7oTlR7Mxu5iT5LHrpLqMNUScmgYEHF8-Lt1
             scope:
               - openid
               - profile
@@ -14,4 +14,4 @@ spring:
         provider:
           auth0:
             # trailing slash is important!
-            issuer-uri: https://lolean-dev.eu.auth0.com/
+            issuer-uri: https://samplitek.eu.auth0.com/
